@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle campo;
+    private Person persona;
 
     /**
      * Constructor for objects of class Picture
@@ -63,7 +64,8 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         
-        sun.slowMoveVertical(100);
+        sun.slowMoveVertical(100); 
+        
         
     }
 
@@ -78,6 +80,7 @@ public class Picture
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
+            campo.changeColor("black");
         }
     }
 
@@ -92,6 +95,8 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+            campo.changeColor("green");
         }
+        
     }
 }

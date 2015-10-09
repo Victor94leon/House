@@ -63,10 +63,7 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        
         sun.slowMoveVertical(100); 
-        
-        
     }
 
     /**
@@ -99,4 +96,18 @@ public class Picture
         }
         
     }
+     /**
+     * Change this picture to black/white display
+     */
+    public void walkPerson()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+        persona = new Person();
+        persona.moveHorizontal(-270);
+        persona.moveVertical(65);
+        persona.makeVisible();
+        persona.slowMoveHorizontal(200);
+        }
+}
 }

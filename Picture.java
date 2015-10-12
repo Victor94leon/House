@@ -123,6 +123,11 @@ public class Picture
     {
         if (wall != null)   // only if it's painted already...
         {
+          persona2 = new Person();
+          persona2.moveHorizontal(-150);
+          persona2.moveVertical(35);
+          persona2.makeVisible();
+          
           bus1 = new Square();
           bus1.changeColor("yellow");
           bus1.changeSize(75);
@@ -164,6 +169,17 @@ public class Picture
           rueda2.moveHorizontal(-120);
           rueda2.moveVertical(160);
           rueda2.makeVisible();
+          
+        }
+    }
+    /**
+     * Hace aparecer una persona saliendo del autobus
+     */
+    public void walkPersonBus()
+    {
+        if (bus1 != null)   // only if it's painted already...
+        {         
+           persona2.slowMoveHorizontal(120);  
         }
     }
 }

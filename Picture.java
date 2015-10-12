@@ -6,7 +6,7 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael K�lling and David J. Barnes
+ * @author  Michael K?lling and David J. Barnes
  * @version 2011.07.31
  */
 public class Picture
@@ -17,7 +17,14 @@ public class Picture
     private Circle sun;
     private Circle campo;
     private Person persona;
-
+    private Square fondo;
+    private Square bus1;
+    private Square bus2;
+    private Square bus3;
+    private Square ventanilla;
+    private Circle rueda1;
+    private Circle rueda2;
+    private Person persona2;
     /**
      * Constructor for objects of class Picture
      */
@@ -96,7 +103,7 @@ public class Picture
         }
     }
     /**
-     * Change this picture to use color display
+     * Hace aparecer una persona por la izquierda que se mueve hasta el centro
      */
     public void walkPerson()
     {
@@ -107,6 +114,56 @@ public class Picture
            persona.moveVertical(65);
            persona.makeVisible();
            persona.slowMoveHorizontal(200);  
+        }
+    }
+    /**
+     * Dibuja un "autobus"
+     */
+    public void drawBus()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+          bus1 = new Square();
+          bus1.changeColor("yellow");
+          bus1.changeSize(75);
+          bus1.moveHorizontal(-295);
+          bus1.moveVertical(75);
+          bus1.makeVisible();
+          
+          bus2 = new Square();
+          bus2.changeColor("yellow");
+          bus2.changeSize(75);
+          bus2.moveHorizontal(-220);
+          bus2.moveVertical(75);
+          bus2.makeVisible();
+          
+          bus3 = new Square();
+          bus3.changeColor("yellow");
+          bus3.changeSize(30);
+          bus3.moveHorizontal(-305);
+          bus3.moveVertical(120);
+          bus3.makeVisible();
+          
+          ventanilla = new Square();
+          ventanilla.changeColor("blue");
+          ventanilla.changeSize(25);
+          ventanilla.moveHorizontal(-285);
+          ventanilla.moveVertical(85);
+          ventanilla.makeVisible();
+          
+          rueda1 = new Circle();
+          rueda1.changeColor("black");
+          rueda1.changeSize(35);
+          rueda1.moveHorizontal(-200);
+          rueda1.moveVertical(160);
+          rueda1.makeVisible();
+          
+          rueda2 = new Circle();
+          rueda2.changeColor("black");
+          rueda2.changeSize(35);
+          rueda2.moveHorizontal(-120);
+          rueda2.moveVertical(160);
+          rueda2.makeVisible();
         }
     }
 }

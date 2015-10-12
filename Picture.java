@@ -62,9 +62,7 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        
         sun.slowMoveVertical(100);
-        
     }
 
     /**
@@ -78,6 +76,7 @@ public class Picture
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
+            campo.changeColor("black");
         }
     }
 
@@ -88,6 +87,7 @@ public class Picture
     {
         if (wall != null)   // only if it's painted already...
         {
+            campo.changeColor("green");
             wall.changeColor("red");
             window.changeColor("black");
             roof.changeColor("green");
